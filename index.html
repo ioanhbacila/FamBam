@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: Arial;
+        text-align: center;
+      }
+
+      .container {
+        text-align: center;
+      }
+
+      /* Style the tab */
+      .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        text-align: center;
+      }
+
+      /* Style the buttons inside the tab */
+      .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+      }
+
+      /* Change background color of buttons on hover */
+      .tab button:hover {
+        background-color: #ddd;
+      }
+
+      /* Create an active/current tablink class */
+      .tab button.active {
+        background-color: #ccc;
+      }
+
+      /* Style the tab content */
+      .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Our Invincible Fam-Bam</h1>
+    <p>Click on tabs to meet US</p>
+
+    <div class="container">
+      <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Irina')">
+          Irina
+        </button>
+        <button class="tablinks" onclick="openCity(event, 'Gio')">
+          Gio
+        </button>
+        <button class="tablinks" onclick="openCity(event, 'Anca')">Anca</button>
+        <button class="tablinks" onclick="openCity(event, 'Andrei')">
+          Andrei
+        </button>
+        <button class="tablinks" onclick="openCity(event, 'Lulu')">Lulu</button>
+        <button class="tablinks" onclick="openCity(event, 'Capri')">
+          Capri
+        </button>
+        <button class="tablinks" onclick="openCity(event, 'Hazel')">
+          Hazel
+        </button>
+        <button class="tablinks" onclick="openCity(event, 'Sami')">Sami</button>
+      </div>
+
+      <div id="Irina" class="tabcontent">
+        <h2>Irina</h2>
+        <p>Our daugther</p>
+        <img src="Irina.jpg" alt="Our daugther" width="360" height="600" />
+      </div>
+      <div id="Gio" class="tabcontent">
+        <h2>Gio</h2>
+        <p>Our second son :)</p>
+        <img src="Gio.jpg" alt="Our second son" width="440" height="600" />
+      </div>
+
+      <div id="Anca" class="tabcontent">
+        <h2>Anca</h2>
+        <p>Madam.</p>
+        <img src="Anca.jpg" alt="madam" width="420" height="600" />
+      </div>
+
+      <div id="Andrei" class="tabcontent">
+        <h2>Andrei</h2>
+        <p>Our son</p>
+        <img src="Andrei.jpg" alt="Our son" width="390" height="600" />
+      </div>
+      <div id="Lulu" class="tabcontent">
+        <h2>Lulu</h2>
+        <p>That's me</p>
+        <img src="Me.jpg" alt="That's me" width="450" height="600" />
+      </div>
+      <div id="Capri" class="tabcontent">
+        <h2>Capri</h2>
+        <p>Our little pitten daugther</p>
+        <img src="Capri.jpg" alt="Our pitten" width="700" height="600" />
+      </div>
+      <div id="Hazel" class="tabcontent">
+        <h2>Hazel</h2>
+        <p>Our little puppy daugther</p>
+        <img src="Hazel.jpg" alt="Our baby dog girl" width="420" height="600" />
+      </div>
+      <div id="Sami" class="tabcontent">
+        <h2>Sami</h2>
+        <p>Our youngest kitten son</p>
+        <img src="Sami.jpg" alt="Our son" width="460" height="600" />
+      </div>
+    </div>
+
+    <script>
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
+  </body>
+</html>
